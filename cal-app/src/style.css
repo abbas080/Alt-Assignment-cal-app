@@ -1,0 +1,58 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background:  #00aaff;
+}
+
+.cal-grid {
+  display: grid;
+  margin-top: 2rem;
+  justify-content: center;
+  grid-template-columns: repeat(4, 6rem);
+  grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
+}
+
+.cal-grid > button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid white;
+  outline: none;
+  background-color: #00ff6c;
+}
+
+.cal-grid > button:hover,
+.cal-grid > button:focus {
+  background-color: #00ffc3;
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+.data {
+  grid-column: 1 / -1;
+  background-color: #00ffc3;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: 0.75rem;
+  word-wrap: break-word;
+  word-break: break-all;
+  border: 1px solid white;
+}
+
+.data .prev-operand {
+  color: black;
+  font-size: 1.5rem;
+}
+
+.data .current-operand {
+  color: black;
+  font-size: 2.5rem;
+}
